@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div id="galleryContainer">
+        <div id="navigationButtons">
+            <div class="arrowButton" onclick="showPreviousImage()" id="prevButton" disabled>&lt;</div>
+            <div class="arrowButton" onclick="showNextImage()" id="nextButton">&gt;</div>
+        </div>
+        <img id="imageDisplay" src="" alt="Gallery Image">
+    </div>
+</body>
+<script>
+    const imageArray = [
+        'images.png',
+        'images(1).png',
+        'images(2).png',
+    ];
+
+    let currentIndex = 0;
+
+    const imageDisplay = document.getElementById('imageDisplay');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+        updateImage();
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % imageArray.length;
+        updateImage();
+    }
+
+    function updateImage() {
+        imageDisplay.src = imageArray[currentIndex];
+        checkButtonStates();
+    }
+
+    function checkButtonStates() {
+        prevButton.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
+        nextButton.style.visibility = currentIndex === imageArray.length - 1 ? 'hidden' : 'visible';
+    }
+
+    updateImage();
+</script>
+<a href="task1.html">1</a>
+<a href="task2.html">2</a>
+<a href="task3.html">3</a>
+<a href="task4.html">4</a>
+<a href="task6.html">6</a>
+<a href="task7.html">7</a>
+<a href="task8.html">8</a>
+<a href="task9.html">9</a>
+
+</html>

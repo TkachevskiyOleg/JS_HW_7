@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+#sliderContainer {
+    width: 300px;
+    margin-top: 20px;
+}
+
+#sliderTrack {
+    width: 95%;
+    height: 10px;
+    background-color: #ddd;
+    position: relative;
+    border-radius: 5px;
+}
+
+#sliderThumb {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    top: -5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: ease 0.5s;
+}

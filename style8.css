@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#textContainer {
+    display: block;
+}
+
+#editContainer {
+    display: none;
+}
+
+textarea {
+    width: 80%;
+    height: 200px;
+    margin: 10px;
+}

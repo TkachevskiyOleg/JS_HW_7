@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#galleryContainer {
+    margin: 20px;
+    position: relative;
+}
+
+#imageDisplay {
+    max-width: 100%;
+    height: auto;
+}
+
+#navigationButtons {
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrowButton {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
